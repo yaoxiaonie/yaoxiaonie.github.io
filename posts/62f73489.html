@@ -1,0 +1,972 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon.png">
+  <link rel="icon" href="/images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="MistyRain">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="下载站地址先把刷机答疑看完再说，一天天问问问。。。点我看刷机答疑 警告严禁转发该站和下载站里的资源及其网址，若违反随时跑路不干了！！！ 关于bug永远不要忘记这是开发版内测，下面给各位复习一下内测版的定义 内测版：是提供给少数资深极客精神米粉的测试版本，用于问题反馈和测试，稳定性不可预估，感谢勇敢冒险者试用内测版。版本根据项目需要和实际情况发布，存在停版的可能，推荐发烧友米粉尝鲜体验，遇到问题请理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WaveProject官改&amp;移植公告">
+<meta property="og:url" content="http://blog.zz423.top/posts/62f73489.html">
+<meta property="og:site_name" content="纸箱 - PaperBox">
+<meta property="og:description" content="下载站地址先把刷机答疑看完再说，一天天问问问。。。点我看刷机答疑 警告严禁转发该站和下载站里的资源及其网址，若违反随时跑路不干了！！！ 关于bug永远不要忘记这是开发版内测，下面给各位复习一下内测版的定义 内测版：是提供给少数资深极客精神米粉的测试版本，用于问题反馈和测试，稳定性不可预估，感谢勇敢冒险者试用内测版。版本根据项目需要和实际情况发布，存在停版的可能，推荐发烧友米粉尝鲜体验，遇到问题请理">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog.zz423.top/images/zanshangma.jpg">
+<meta property="og:image" content="http://blog.zz423.top/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20221005170616.jpg">
+<meta property="og:image" content="http://blog.zz423.top/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20221005170840.jpg">
+<meta property="article:published_time" content="2022-08-05T12:07:07.000Z">
+<meta property="article:modified_time" content="2023-01-28T16:39:48.717Z">
+<meta property="article:author" content="MistyRain">
+<meta property="article:tag" content="小米10">
+<meta property="article:tag" content="小米10 Pro">
+<meta property="article:tag" content="MIUI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog.zz423.top/images/zanshangma.jpg">
+  
+  
+  
+  <title>WaveProject官改&amp;移植公告 - 纸箱 - PaperBox</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.zz423.top","root":"/","version":"1.9.4","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>纸箱 - PaperBox</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">WaveProject官改&移植公告</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-08-05 20:07" pubdate>
+          2022年8月5日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          18 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">WaveProject官改&amp;移植公告</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="下载站地址"><a href="#下载站地址" class="headerlink" title="下载站地址"></a>下载站地址</h2><p>先把刷机答疑看完再说，一天天问问问。。。<br><a href="#%E5%88%B7%E6%9C%BA%E7%AD%94%E7%96%91-Q-amp-A">点我看刷机答疑</a></p>
+<h2 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h2><p>严禁转发该站和下载站里的资源及其网址，若违反随时跑路不干了！！！</p>
+<h2 id="关于bug"><a href="#关于bug" class="headerlink" title="关于bug"></a>关于bug</h2><p>永远不要忘记这是开发版内测，下面给各位复习一下内测版的定义</p>
+<p>内测版：是提供给少数资深极客精神米粉的测试版本，用于问题反馈和测试，稳定性不可预估，感谢勇敢冒险者试用内测版。版本根据项目需要和实际情况发布，存在停版的可能，推荐发烧友米粉尝鲜体验，遇到问题请理性反馈，关注后续版本升级。</p>
+<h2 id="刷机答疑-Q-amp-A"><a href="#刷机答疑-Q-amp-A" class="headerlink" title="刷机答疑 Q&amp;A"></a>刷机答疑 Q&amp;A</h2><p>Q: 下载站在哪怎么找不到？<br>A: 能问出这个问题的一定是没阅读完刷机答疑的人</p>
+<p>Q: 下载站进不去？<br>A: 下载站只有某些地区比较特殊，请科学上网尝试，本人广东移动秒开</p>
+<p>Q: 下载站很慢或者无法下载怎么办？<br>A: 不要用Edge、Chrome、小米浏览器和Via，优先使用IDM+，次之ADM，夸克</p>
+<p>Q: 包怎么刷？<br>A: 支持电脑线刷（不是miflash），请解压刷机包打开README.txt查看刷机教程！卡刷必须要有TWRP REC！</p>
+<p>Q: 官方来的可以直接刷吗？<br>A: 不可以，必须要刷TWRP REC，然后还要格式化data，请注意备份好自己的数据！</p>
+<p>Q: 官改来的可以直接刷吗？<br>A: data不加密的情况下可以，不过出现软件发生玄学bug别向我反馈。</p>
+<p>Q: WaveProject降级应用闪退？<br>A: Root后删除&#x2F;data&#x2F;system&#x2F;package_cache下的文件后重启。</p>
+<p>Q: 后续更新需要双清吗？<br>A：不需要。</p>
+<p>Q: 为什么我不能直接修改system？<br>A: 因为小米12X的system product system_ext odm vendor均采用的是erofs格式，erofs可读不可写，移植了system比较玄学不能直接修改，只能使用systemless（Magisk Module）方式来修改。</p>
+<p>Q: 为什么振动那么强？<br>A: 包默认优化了振动和音质，不喜欢自己刷模块解决，特性不可能做到每个人都喜欢</p>
+<p>Q: 什么时候更新？<br>A: 由于小米12X是一款比较冷门的机器，内测链接不好拿，一般会在内测发布的后1天发布。</p>
+<p>Q: 看了群公告说能OTA是吗，怎么我点重启立即更新还要我自己动手选择？<br>A: 由于skkk的rec不支持OpenRecoveryScript的功能，我也无能为力，请使用残芯的Rec。（你要是想OTA你就得接受这圈钱G的Rec，除非你能找到其他支持的）</p>
+<p>Q: 为什么网站有密码？<br>A: 你搁这问我要管理员权限呢？</p>
+<p>Q: 会更新到什么时候？<br>A: 不出意外的话，8月中旬我人会没，由服务器代替更新，至于服务器能撑多久我不知道。</p>
+<p>Q: 什么时候会回来？<br>A: 大概不可能回来了，因为高二压力很大，我不敢拿自己的人生来赌。</p>
+<p>Q: 会移植MIUI T（Android 13）吗？<br>A: 应该是不会了，如上解释。</p>
+<p>Q: 会有MIUI 14更新吗？<br>A: 我可以说有，仅安卓12。</p>
+<h2 id="捐赠"><a href="#捐赠" class="headerlink" title="捐赠"></a>捐赠</h2><p>如果你觉得我们的ROM好用，可以通过捐赠来帮助我们运营服务器</p>
+<h2 id="更多捐赠方式"><a href="#更多捐赠方式" class="headerlink" title="更多捐赠方式"></a>更多捐赠方式</h2><p><a href="https://blog.zz423.top/images/alipay.jpg">支付宝收款码</a> | <a href="https://blog.zz423.top/images/alipay.jpg">微信收款码</a></p>
+<p><img src="https://blog.zz423.top/images/zanshangma.jpg" srcset="/img/loading.gif" lazyload alt="微信赞赏码"></p>
+<h3 id="感谢以下捐赠人员"><a href="#感谢以下捐赠人员" class="headerlink" title="感谢以下捐赠人员"></a>感谢以下捐赠人员</h3><table>
+<thead>
+<tr>
+<th>昵称</th>
+<th>渠道</th>
+<th>金额</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>无生</td>
+<td>微信</td>
+<td>￥2</td>
+</tr>
+<tr>
+<td>零櫻</td>
+<td>支付宝</td>
+<td>￥10</td>
+</tr>
+<tr>
+<td>骚年</td>
+<td>微信</td>
+<td>￥10</td>
+</tr>
+<tr>
+<td>雨轩</td>
+<td>微信</td>
+<td>￥30</td>
+</tr>
+<tr>
+<td>灰体</td>
+<td>微信</td>
+<td>￥20</td>
+</tr>
+<tr>
+<td>酷酷的阿星</td>
+<td>微信</td>
+<td>￥3</td>
+</tr>
+<tr>
+<td>カプチーノ</td>
+<td>微信</td>
+<td>￥3</td>
+</tr>
+<tr>
+<td>苦乐</td>
+<td>微信</td>
+<td>￥20</td>
+</tr>
+<tr>
+<td>.</td>
+<td>微信</td>
+<td>￥3</td>
+</tr>
+<tr>
+<td>依</td>
+<td>微信</td>
+<td>￥10</td>
+</tr>
+<tr>
+<td>致南墙</td>
+<td>微信</td>
+<td>￥5</td>
+</tr>
+<tr>
+<td>阳光未必暖人心</td>
+<td>微信</td>
+<td>￥20</td>
+</tr>
+<tr>
+<td>*?</td>
+<td>微信</td>
+<td>￥2</td>
+</tr>
+<tr>
+<td>*了</td>
+<td>微信</td>
+<td>￥2</td>
+</tr>
+<tr>
+<td>**佳</td>
+<td>支付宝</td>
+<td>￥8.88</td>
+</tr>
+<tr>
+<td>多喝热水886</td>
+<td>QQ</td>
+<td>￥10</td>
+</tr>
+<tr>
+<td>L</td>
+<td>QQ</td>
+<td>￥5</td>
+</tr>
+<tr>
+<td>柱</td>
+<td>QQ</td>
+<td>￥10</td>
+</tr>
+<tr>
+<td>静默勿语殇如风</td>
+<td>QQ</td>
+<td>￥5</td>
+</tr>
+<tr>
+<td>**林</td>
+<td>支付宝</td>
+<td>￥50</td>
+</tr>
+<tr>
+<td>**晨</td>
+<td>支付宝</td>
+<td>￥3</td>
+</tr>
+<tr>
+<td>ᯤ⁶ᴳ⁺</td>
+<td>微信</td>
+<td>￥30</td>
+</tr>
+<tr>
+<td>L*o</td>
+<td>微信</td>
+<td>￥11.45</td>
+</tr>
+<tr>
+<td>lll</td>
+<td>微信</td>
+<td>￥30</td>
+</tr>
+<tr>
+<td>何必在意</td>
+<td>微信</td>
+<td>￥3</td>
+</tr>
+<tr>
+<td>爱搞机的伪大佬</td>
+<td>微信</td>
+<td>￥5</td>
+</tr>
+<tr>
+<td>江華</td>
+<td>微信</td>
+<td>￥15</td>
+</tr>
+<tr>
+<td>憨豆</td>
+<td>微信</td>
+<td>￥10</td>
+</tr>
+<tr>
+<td>梁36</td>
+<td>微信</td>
+<td>￥10</td>
+</tr>
+<tr>
+<td>*乐</td>
+<td>微信</td>
+<td>￥18.88</td>
+</tr>
+<tr>
+<td>**源</td>
+<td>微信</td>
+<td>￥6.66</td>
+</tr>
+<tr>
+<td>罗丝钉</td>
+<td>微信</td>
+<td>￥10</td>
+</tr>
+<tr>
+<td>张磊</td>
+<td>微信</td>
+<td>￥30</td>
+</tr>
+<tr>
+<td>我是拉法儿</td>
+<td>微信</td>
+<td>￥15</td>
+</tr>
+<tr>
+<td>黑白世界</td>
+<td>微信</td>
+<td>￥10</td>
+</tr>
+<tr>
+<td>一点点心意</td>
+<td>微信</td>
+<td>￥0.01</td>
+</tr>
+<tr>
+<td>**秀</td>
+<td>支付宝</td>
+<td>￥3</td>
+</tr>
+<tr>
+<td>**源</td>
+<td>支付宝</td>
+<td>￥6.66</td>
+</tr>
+<tr>
+<td>**雨</td>
+<td>支付宝</td>
+<td>￥20</td>
+</tr>
+<tr>
+<td>404 Not Found</td>
+<td>微信</td>
+<td>￥8</td>
+</tr>
+<tr>
+<td>zgx</td>
+<td>微信</td>
+<td>￥2</td>
+</tr>
+<tr>
+<td>*二</td>
+<td>微信</td>
+<td>￥10</td>
+</tr>
+<tr>
+<td>（空白）</td>
+<td>微信</td>
+<td>￥3.66v</td>
+</tr>
+<tr>
+<td>吕布（已简写）</td>
+<td>微信</td>
+<td>￥1</td>
+</tr>
+<tr>
+<td>One dream one moment</td>
+<td>微信</td>
+<td>￥10</td>
+</tr>
+<tr>
+<td>喵喵喵</td>
+<td>微信</td>
+<td>￥6</td>
+</tr>
+<tr>
+<td>BiaWei</td>
+<td>微信</td>
+<td>￥6.66</td>
+</tr>
+<tr>
+<td>（银联云用户）</td>
+<td>微信</td>
+<td>￥30</td>
+</tr>
+<tr>
+<td>庞翔钟</td>
+<td>微信</td>
+<td>￥3.66</td>
+</tr>
+<tr>
+<td>飛</td>
+<td>微信</td>
+<td>￥3</td>
+</tr>
+<tr>
+<td>*💤</td>
+<td>微信</td>
+<td>￥2.5</td>
+</tr>
+<tr>
+<td>22</td>
+<td>微信</td>
+<td>￥2</td>
+</tr>
+<tr>
+<td>万一有用呢。</td>
+<td>微信</td>
+<td>￥10</td>
+</tr>
+<tr>
+<td>*[椰子树]</td>
+<td>微信</td>
+<td>￥10</td>
+</tr>
+<tr>
+<td>捐赠名单更新于2023.01.06</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="捐款金额公开账单"><a href="#捐款金额公开账单" class="headerlink" title="捐款金额公开账单"></a>捐款金额公开账单</h3><p><img src="/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20221005170616.jpg" srcset="/img/loading.gif" lazyload alt="服务器消费"><br><img src="/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20221005170840.jpg" srcset="/img/loading.gif" lazyload alt="硬盘消费"></p>
+<h2 id="特别感谢"><a href="#特别感谢" class="headerlink" title="特别感谢"></a>特别感谢</h2><p>MengBad赞助的上海服务器和az服务器！！！</p>
+<p>“随便备注一个就行”赞助的天翼云盘！！！</p>
+<p>LIN96赞助的阿里云盘！！！</p>
+<h2 id="联系方式（备注来意，拿包问群不回）"><a href="#联系方式（备注来意，拿包问群不回）" class="headerlink" title="联系方式（备注来意，拿包问群不回）"></a>联系方式（备注来意，拿包问群不回）</h2><p>QQ: 465205753</p>
+<p>邮箱: <a href="mailto:&#52;&#x36;&#53;&#x32;&#48;&#x35;&#x37;&#53;&#51;&#64;&#x71;&#x71;&#46;&#99;&#111;&#x6d;">&#52;&#x36;&#53;&#x32;&#48;&#x35;&#x37;&#53;&#51;&#64;&#x71;&#x71;&#46;&#99;&#111;&#x6d;</a></p>
+<p>Coolapk: Alibi</p>
+<h2 id="下载站地址-1"><a href="#下载站地址-1" class="headerlink" title="下载站地址"></a>下载站地址</h2><p>主站：<a target="_blank" rel="noopener" href="https://alist.zz423.top(最好使用https协议打开)/">https://alist.zz423.top（最好使用https协议打开）</a><br>希望你不是一进网站就划到底拿链接，如果出现什么问题概不负责（刷机答疑看完的忽略）<br><a href="#%E5%88%B7%E6%9C%BA%E7%AD%94%E7%96%91-Q-amp-A">点我看刷机答疑</a></p>
+<h2 id="如何找到自己机型的代号"><a href="#如何找到自己机型的代号" class="headerlink" title="如何找到自己机型的代号"></a>如何找到自己机型的代号</h2><p>访问该网站<a target="_blank" rel="noopener" href="https://miuiver.com/xiaomi-device-codename%E5%8E%BB%E6%90%9C%E5%AF%BB%E5%8D%B3%E5%8F%AF">https://miuiver.com/xiaomi-device-codename去搜寻即可</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/WaveProject/" class="category-chain-item">WaveProject</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/WaveProject/ProjectTreble/" class="category-chain-item">ProjectTreble</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/WaveProject/ProjectTreble/MIUI%E5%AE%98%E6%94%B9/" class="category-chain-item">MIUI官改</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%B0%8F%E7%B1%B310/">#小米10</a>
+      
+        <a href="/tags/%E5%B0%8F%E7%B1%B310-Pro/">#小米10 Pro</a>
+      
+        <a href="/tags/MIUI/">#MIUI</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>WaveProject官改&amp;移植公告</div>
+      <div>http://blog.zz423.top/posts/62f73489.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>MistyRain</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年8月5日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/9265a828.html" title="2022年8月Heroku搭建sharelist最新方法">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2022年8月Heroku搭建sharelist最新方法</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/62520.html" title="Linux环境下使用shc加密的脚本破解实战">
+                        <span class="hidden-mobile">Linux环境下使用shc加密的脚本破解实战</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       本博客所有文章除特别声明外，均采用 CC BY-NC-SA 4.0 ，转载请注明出处。 本站由 <a href="https://blog.zz423.top" target="_blank" rel="nofollow noopener"><span>@MistyRain</span></a> 创建，使用 <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 作为主题。 <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
