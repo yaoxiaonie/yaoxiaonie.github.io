@@ -24,7 +24,7 @@
 <meta property="og:description" content="因为Windows11对于旧电脑可能不是很友好，会出现右键菜单弹出卡顿，博主亲测调回Windows10样式有好转！代码如下，新建一个bat为后缀的文件，将内容复制进去，双击运行即可！Windows10系统无效 Windows10样式1234reg add &quot;HKCU\Software\Classes\CLSID\&amp;#123;86ca1aa0-34aa-4e8b-a509-50c905ba">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-08T04:07:07.000Z">
-<meta property="article:modified_time" content="2023-01-28T16:56:07.170Z">
+<meta property="article:modified_time" content="2023-02-05T03:14:29.569Z">
 <meta property="article:author" content="MistyRain">
 <meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary_large_image">
@@ -275,9 +275,9 @@
               <div class="markdown-body">
                 
                 <p>因为Windows11对于旧电脑可能不是很友好，会出现右键菜单弹出卡顿，博主亲测调回Windows10样式有好转！<br>代码如下，新建一个bat为后缀的文件，将内容复制进去，双击运行即可！<br>Windows10系统无效</p>
-<h2 id="Windows10样式"><a href="#Windows10样式" class="headerlink" title="Windows10样式"></a>Windows10样式</h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs CMD">reg add &quot;HKCU\Software\Classes\CLSID\&#123;<span class="hljs-number">86</span>ca1aa0-<span class="hljs-number">34</span>aa-<span class="hljs-number">4</span>e8b-a509-<span class="hljs-number">50</span>c905bae2a2&#125;\InprocServer32&quot; /f /ve<br>@<span class="hljs-built_in">taskkill</span> /f /IM explorer.exe<br><span class="hljs-built_in">start</span> explorer<br><span class="hljs-keyword">exit</span><br></code></pre></td></tr></table></figure>
+<h1 id="Windows10样式"><a href="#Windows10样式" class="headerlink" title="Windows10样式"></a>Windows10样式</h1><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs CMD">reg add &quot;HKCU\Software\Classes\CLSID\&#123;<span class="hljs-number">86</span>ca1aa0-<span class="hljs-number">34</span>aa-<span class="hljs-number">4</span>e8b-a509-<span class="hljs-number">50</span>c905bae2a2&#125;\InprocServer32&quot; /f /ve<br>@<span class="hljs-built_in">taskkill</span> /f /IM explorer.exe<br><span class="hljs-built_in">start</span> explorer<br><span class="hljs-keyword">exit</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="Windows11样式"><a href="#Windows11样式" class="headerlink" title="Windows11样式"></a>Windows11样式</h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs CMD">reg delete &quot;HKCU\Software\Classes\CLSID\&#123;<span class="hljs-number">86</span>ca1aa0-<span class="hljs-number">34</span>aa-<span class="hljs-number">4</span>e8b-a509-<span class="hljs-number">50</span>c905bae2a2&#125;&quot; /f<br>@<span class="hljs-built_in">taskkill</span> /f /IM explorer.exe<br><span class="hljs-built_in">start</span> explorer<br><span class="hljs-keyword">exit</span><br></code></pre></td></tr></table></figure>
+<h1 id="Windows11样式"><a href="#Windows11样式" class="headerlink" title="Windows11样式"></a>Windows11样式</h1><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs CMD">reg delete &quot;HKCU\Software\Classes\CLSID\&#123;<span class="hljs-number">86</span>ca1aa0-<span class="hljs-number">34</span>aa-<span class="hljs-number">4</span>e8b-a509-<span class="hljs-number">50</span>c905bae2a2&#125;&quot; /f<br>@<span class="hljs-built_in">taskkill</span> /f /IM explorer.exe<br><span class="hljs-built_in">start</span> explorer<br><span class="hljs-keyword">exit</span><br></code></pre></td></tr></table></figure>
 
                 
               </div>

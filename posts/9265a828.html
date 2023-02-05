@@ -29,7 +29,7 @@
 <meta property="og:image" content="http://blog.zz423.top/images/sharelist-heroku/actions.png">
 <meta property="og:image" content="http://blog.zz423.top/images/sharelist-heroku/vars.png">
 <meta property="article:published_time" content="2022-08-08T13:07:07.000Z">
-<meta property="article:modified_time" content="2023-01-28T16:56:43.830Z">
+<meta property="article:modified_time" content="2023-02-05T03:13:24.889Z">
 <meta property="article:author" content="MistyRain">
 <meta property="article:tag" content="网盘挂载">
 <meta property="article:tag" content="Heroku">
@@ -284,10 +284,10 @@
                 
                 <p>谈到网盘挂载项目，白嫖党可能第一时间会说出“OneManager yyds”，OneManager几乎主流的网盘都能挂载，而且可以搭建到Heroku、Glitch、Vercel、Replit等免费平台。不知道各位有没有发现OneManager搭建到这些地方访问都很慢，要么等好几秒，要么瞬间打开。有没有新的轻量级挂载程序可以替代呢？对，Alist！它提供了搭建在Heroku的方案，不过Heroku App如果30分钟没有活跃就会休眠，休眠后会重置Alist，这个问题作者给出的办法食用后依旧会出现重置问题。那么到底有没有不会被Heroku重置的，又轻量，访问速度又快的一个挂载程序呢？面对这个问题我觉得sharelist-heroku无疑是最好的网盘挂载项目，覆盖主流网盘，轻量级，可白嫖它都有！</p>
 <p>问题来了，在今天sharelist搭建到Heroku的方法失效了，有人提了issue大佬也没有去修复。<br>所以我写了个适用于2022年的搭建方法！！！<br>地址：<a target="_blank" rel="noopener" href="https://github.com/yaoxiaonie/sharelist-heroku">https://github.com/yaoxiaonie/sharelist-heroku</a><br>觉得好用的可以给个Star</p>
-<h2 id="Heroku一键部署"><a href="#Heroku一键部署" class="headerlink" title="Heroku一键部署"></a>Heroku一键部署</h2><p>首先把项目Fork到自己仓库，点击<br><img src="https://www.herokucdn.com/deploy/button.png" srcset="/img/loading.gif" lazyload alt="Deploy"></p>
+<h1 id="Heroku一键部署"><a href="#Heroku一键部署" class="headerlink" title="Heroku一键部署"></a>Heroku一键部署</h1><p>首先把项目Fork到自己仓库，点击<br><img src="https://www.herokucdn.com/deploy/button.png" srcset="/img/loading.gif" lazyload alt="Deploy"></p>
 <p>进入Heroku以后我们会看到<br><img src="/images/sharelist-heroku/herokuapp.png" srcset="/img/loading.gif" lazyload alt="HerokuApp"></p>
 <p>这里填好你的App名字，如果之前搭建过sharelist的可以导出配置复制到sharelistConfig的框框里，或者以链接的形式也行，没有就填{}跳过配置。<br>到这里就搭建好了，非常简单！</p>
-<h2 id="Github-actions一键部署"><a href="#Github-actions一键部署" class="headerlink" title="Github actions一键部署"></a>Github actions一键部署</h2><p>还是一样的，首先把项目Fork到自己仓库<br>Fork完仓库后，我们按照以下步骤导入自己的Heroku信息<br><img src="/images/sharelist-heroku/secrets.png" srcset="/img/loading.gif" lazyload alt="Github Secrets"></p>
+<h1 id="Github-actions一键部署"><a href="#Github-actions一键部署" class="headerlink" title="Github actions一键部署"></a>Github actions一键部署</h1><p>还是一样的，首先把项目Fork到自己仓库<br>Fork完仓库后，我们按照以下步骤导入自己的Heroku信息<br><img src="/images/sharelist-heroku/secrets.png" srcset="/img/loading.gif" lazyload alt="Github Secrets"></p>
 <p>注意字母全部都是大写的，EMALI、HEROKU_API_KEY为必填项，APP_NAME可填可不填。<br><img src="/images/sharelist-heroku/actions.png" srcset="/img/loading.gif" lazyload alt="Github Actions"></p>
 <p>这里按照步骤来，最后那个是环境变量，在你的用户设置里的，所有仓库都可以调用的那个，按照本教程的话是为空，有需要的可以自己填上自己的环境变量名。<br>等待部署成功后，还不行，我们来到Heroku App后台。<br><img src="/images/sharelist-heroku/vars.png" srcset="/img/loading.gif" lazyload alt="Heroku Config Vars"></p>
 <p>先点Reveal Config Vars按钮，在这里设置好sharelistConfig和sharelistVersion后，重启App即可（More &gt; Restart all dynos）</p>
